@@ -1,89 +1,86 @@
-
-
 .button {
-	cursor: pointer;
-	font-weight: 700;
-	line-height: 1.88;
-	text-align: center;
-	letter-spacing: var(--secondary-letter-spacing);
-	color: var(--secondary-text-color);
-	background-color: var(--active-button-background-color);
-	border: none;
-	border-radius: 4px;
-	padding: 10px 32px;
-	@include transition(background) ;
-	@include transition(box-shadow) ;
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1.88;
+  text-align: center;
+  letter-spacing: var(--secondary-letter-spacing);
+  color: var(--secondary-text-color);
+  background-color: var(--active-button-background-color);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 32px;
+  @include transition(background);
+  @include transition(box-shadow);
 }
 
 .modal__button {
-	cursor: pointer;
-	position: absolute;
-	top: 8px;
-	right: 8px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 30px;
-	height: 30px;
-	background-color: transparent;
-	border: 1px solid rgba(0, 0, 0, 0.1);
-	border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 
-	@include transition(fill) ;
+  @include transition(fill);
 
-	&:hover {
-		fill: var(--hover-focus-color);
-	}
+  &:hover {
+    fill: var(--hover-focus-color);
+  }
 }
 
 .modal-form__button {
-	cursor: pointer;
-	display: block;
-	margin: 0 auto;
-	width: 200px;
-	height: 50px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  height: 50px;
 
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 1.9;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
 
-	text-align: center;
-	letter-spacing: 0.06em;
+  text-align: center;
+  letter-spacing: 0.06em;
 
-	background-color: var(--active-button-background-color);
-	color: var(--secondary-text-color);
-	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	border: 0;
-	border-radius: 4px;
-	@include transition(background-color) ;
-
+  background-color: var(--active-button-background-color);
+  color: var(--secondary-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 0;
+  border-radius: 4px;
+  @include transition(background-color);
 }
 
 .filter-list__button {
-	border: none;
-	border-radius: 4px;
+  border: none;
+  border-radius: 4px;
 
-	padding: 6px 22px;
+  padding: 6px 22px;
 
-	font-family: inherit;
-	font-size: 16px;
-	font-weight: 500;
-	line-height: 1.62;
-	text-align: center;
-	cursor: pointer;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  text-align: center;
+  cursor: pointer;
 
-	background-color: var(--button-background-color);
-	color: var(--button-text-color);
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
 
-		@include transition(background-color) ;
-		@include transition(box-shadow) ;
-		@include transition(color) ;
-		
+  @include transition(background-color);
+  @include transition(box-shadow);
+  @include transition(color);
 
-	&:hover,
-	&:focus {
-		background-color: var(--active-button-background-color);
-		color: var(--secondary-text-color);
-		box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-	}
+  &:hover,
+  &:focus {
+    background-color: var(--active-button-background-color);
+    color: var(--secondary-text-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
