@@ -1,0 +1,18 @@
+
+.container {
+  /* outline: 1px solid tomato; */
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.address-container {
+  margin-right: 70px;
+}
