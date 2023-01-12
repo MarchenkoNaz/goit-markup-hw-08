@@ -12,17 +12,24 @@ body {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  @media (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  padding-top: 60px;
+  padding-bottom: 60px;
 
-	&__title {
-		margin-bottom: 50px;
-		font-weight: 700;
-		font-size: 36px;
-		line-height: 1.67;
-		text-align: center;
-		color: var(--title-text-color);
-	}
+  &__title {
+    @media (min-width: 1200px) {
+      font-size: 36px;
+    }
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    color: var(--title-text-color);
+  }
 }
 
 .icon {
@@ -32,4 +39,15 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }

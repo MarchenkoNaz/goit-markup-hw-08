@@ -1,11 +1,19 @@
-
 .container {
   /* outline: 1px solid tomato; */
-  width: 1200px;
+
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  @media (min-width: 480px) {
+    width: 480px;
+  }
+  @media (min-width: 768px) {
+    width: 768px;
+  }
+  @media (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 .flex-container {
@@ -14,5 +22,9 @@
 }
 
 .address-container {
-  margin-right: 70px;
+  @media (min-width: 768px) {
+    margin-right: 70px;
+  }
+  margin-right: 0;
+  margin-bottom: 60px;
 }
