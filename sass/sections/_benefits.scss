@@ -11,6 +11,10 @@
 
   &__item {
     @media (min-width: 768px) {
+      flex-basis: calc(100% / 2 - var(--card-gap));
+      margin-left: var(--card-gap);
+    }
+    @media (min-width: 1200px) {
       flex-basis: calc(100% / 4 - var(--card-gap));
       margin-left: var(--card-gap);
     }
