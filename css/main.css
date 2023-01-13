@@ -115,7 +115,7 @@ p {
 }
 @media (min-width: 768px) {
   .address-container {
-    margin-right: 70px;
+    margin: 0;
   }
 }
 
@@ -227,15 +227,19 @@ p {
           align-items: center;
   /* #media */
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .navigation {
     height: 80px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 
@@ -251,9 +255,15 @@ p {
   letter-spacing: 0.02em;
   /* #media */
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navigation-list {
     display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .navigation-list {
+    margin-left: 87px;
+    margin-right: 97px;
   }
 }
 .navigation-list__item + .navigation-list__item {
@@ -304,7 +314,7 @@ p {
   margin-left: auto;
   /* #media */
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .navigation__burger-menu {
     display: none;
   }
@@ -664,6 +674,7 @@ p {
 @media (max-width: 1200px) {
   .form-send {
     max-width: 450px;
+    margin: auto;
   }
 }
 .form-send__text {
@@ -695,7 +706,6 @@ p {
   padding-left: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-  width: 358px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -708,6 +718,11 @@ p {
     margin-right: 0;
     width: 100%;
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .form-group__email {
+    width: 358px;
   }
 }
 .form-group__email::-webkit-input-placeholder {
@@ -899,7 +914,7 @@ p {
   text-transform: uppercase;
   color: var(--title-text-color);
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .benefits-list__title {
     text-align: center;
   }
@@ -1065,15 +1080,34 @@ p {
 }
 
 .footer {
-  text-align: center;
   background-color: var(--footer-hero-background-color);
   width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 @media (max-width: 1200px) {
+  .footer {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .footer__tablet-group {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
   .footer-social {
     margin-bottom: 60px;
+  }
+}
+@media (min-width: 768px) {
+  .footer-social {
+    margin: 0;
   }
 }
 .footer-social__title {

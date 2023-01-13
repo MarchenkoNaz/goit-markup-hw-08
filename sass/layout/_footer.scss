@@ -1,17 +1,28 @@
 .footer {
-  text-align: center;
   background-color: var(--footer-hero-background-color);
   width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
-
+  @media (max-width: 1200px) {
+    text-align: center;
+  }
+  &__tablet-group {
+    @media (min-width: 768px) {
+      justify-content: space-around;
+      display: flex;
+      margin-bottom: 60px;
+    }
+  }
   // & .container {
   // 	align-items: baseline;
   // }
 
   &-social {
-    @media (max-width: 1200px) {
+    @media (max-width: 768px) {
       margin-bottom: 60px;
+    }
+    @media (min-width: 768px) {
+      margin: 0;
     }
   }
   &-social__title {
