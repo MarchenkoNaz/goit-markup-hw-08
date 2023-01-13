@@ -5,7 +5,7 @@
     margin-left: calc(-1 * var(--card-gap));
 
     @media (max-width: 480px) {
-      flex-basis: calc(100% / 2);
+      flex-basis: calc(100% / 2 - var(--card-gap));
     }
   }
 
@@ -15,7 +15,7 @@
     margin-bottom: var(--card-gap);
     margin-left: var(--card-gap);
 
-    @media (max-width: 1200px) {
+    @media (min-width: 768px) {
       flex-basis: calc(100% / 3 - var(--card-gap));
       margin-left: var(--card-gap);
     }
