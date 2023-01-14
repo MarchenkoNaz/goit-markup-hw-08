@@ -1,11 +1,10 @@
 .form-send {
+  @media (max-width: 1199px) {
+    max-width: 450px;
+    margin: auto;
+  }
   @media (min-width: 1200px) {
     max-width: 570px;
-    margin-left: 93px;
-  }
-  @media (max-width: 1200px) {
-    max-width: 450px;
-		margin:auto;
   }
 
   &__text {

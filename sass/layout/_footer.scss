@@ -3,6 +3,7 @@
   width: 100%;
   padding-top: 60px;
   padding-bottom: 60px;
+
   @media (max-width: 1200px) {
     text-align: center;
   }
@@ -12,17 +13,27 @@
       display: flex;
       margin-bottom: 60px;
     }
+    @media (min-width: 1200px) {
+      display: flex;
+    }
   }
-  // & .container {
-  // 	align-items: baseline;
-  // }
+  & .container {
+    @media (min-width: 1200px) {
+      align-items: baseline;
+      display: flex;
+      align-items: baseline;
+    }
+  }
 
   &-social {
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       margin-bottom: 60px;
     }
     @media (min-width: 768px) {
       margin: 0;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 93px;
     }
   }
   &-social__title {
