@@ -1,14 +1,16 @@
-.filter-title{
-	@include visually-hidden;
+.filter-title {
+  @include visually-hidden;
 }
 .filter-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: start;
   margin-bottom: 50px;
-	
-	&__item{
-  margin-left: 8px;
-}
-}
+  @media (min-width: 768px) {
+    justify-content: center;
+  }
 
-
+  &__item {
+    margin-left: 8px;
+  }
+}
