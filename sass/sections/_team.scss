@@ -27,6 +27,7 @@
 }
 
 .team-list {
+  @extend %lists;
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-gap));

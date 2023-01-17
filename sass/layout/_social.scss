@@ -1,4 +1,5 @@
 .social-links__list {
+  @extend %lists;
   margin-left: -10px;
   display: flex;
   justify-content: center;
@@ -16,14 +17,13 @@
   cursor: pointer;
   border-radius: 50%;
 
-	@include transition(background-color) ;
-	@include transition(color) ;
+  @include transition(background-color);
+  @include transition(color);
 
-	&:hover {
-		background-color: var(--hover-focus-color);
-		color: var(--secondary-text-color);
-	}
-	
+  &:hover {
+    background-color: var(--hover-focus-color);
+    color: var(--secondary-text-color);
+  }
 }
 
 .social-links__link {
@@ -36,4 +36,3 @@
 .social-links__icon {
   fill: currentColor;
 }
-

@@ -2,6 +2,7 @@
   @include visually-hidden;
 }
 .filter-list {
+  @extend %lists;
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
@@ -12,5 +13,8 @@
 
   &__item {
     margin-left: 8px;
+    @media (max-width: 767px) {
+      margin-bottom: 15px;
+    }
   }
 }

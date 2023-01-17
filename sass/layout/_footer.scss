@@ -74,6 +74,7 @@
 }
 
 .address-list {
+  @extend %lists;
   margin-bottom: -9px;
   font-style: normal;
 
