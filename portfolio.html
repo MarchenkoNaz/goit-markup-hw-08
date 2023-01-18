@@ -22,13 +22,13 @@
 	-->
 
 	<header class="header">
-		<div class="container ">
+		<div class="container">
 			<!-- 
 	#navigation
 -->
 			<nav class="navigation">
 				<a class="logo" href="./index.html"><span class="logo-span">Web</span>Studio</a>
-				<button type="button" class="menu-button js-open-menu " aria-expanded="false">
+				<button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
 					<svg class="navigation__burger-icon" width="24" height="16">
 						<use class="icon-menu" aria-label="Перемикач меню" href=" ./images/icons.svg#icon-menu"></use>
 						<use class="icon-cross" href="./images/icons.svg#icon-close"></use>
@@ -37,21 +37,25 @@
 				<!-- 
 	#list of navigation
  -->
-				<div class="menu-container  ">
-					<ul class="navigation-list ">
-						<li class="navigation-list__item "><a class="navigation-list__link " href="./index.html">Студія</a></li>
-						<li class="navigation-list__item "><a class="navigation-list__link navigation-list__link--curent"
-								href="./portfolio.html">Портфоліо</a>
+				<div class="menu-container">
+					<ul class="navigation-list lists">
+						<li class="navigation-list__item">
+							<a class="navigation-list__link navigation-list__link--curent" href="./index.html">Студія</a>
 						</li>
-						<li class="navigation-list__item "><a class="navigation-list__link" href="">Контакти</a></li>
+						<li class="navigation-list__item">
+							<a class="navigation-list__link" href="./portfolio.html">Портфоліо</a>
+						</li>
+						<li class="navigation-list__item">
+							<a class="navigation-list__link" href="">Контакти</a>
+						</li>
 					</ul>
 
 					<!-- 
 	#contacts 
 -->
-					<ul class="contacts-list ">
+					<ul class="contacts-list lists">
 						<li class="contacts-list__item">
-							<a class=" contacts-list__link" href="mailto:info@devstudio.com">
+							<a class="contacts-list__link" href="mailto:info@devstudio.com">
 								<svg class="contacts-list__icon icon" width="16" height="12">
 									<use href="./images/icons.svg#icon-envelope"></use>
 								</svg>
@@ -70,26 +74,29 @@
 				</div>
 			</nav>
 			<!-- #mobile menu -->
-			<div class="mobile-menu-container js-menu-container ">
-				<button type="button" class="menu-button mobile-button js-close-menu" aria-expanded="false">
-					<svg class="navigation__burger-icon " width="24" height="16">
+			<div class="mobile-menu-container js-menu-container">
+				<button type="button" class="menu-toggle js-close-menu">
+					<svg class="navigation__burger-icon" width="24" height="16">
 						<use class="icon-cross" href="./images/icons.svg#icon-close"></use>
 					</svg>
 				</button>
 
-				<ul class="mobile-nav ">
-					<li class="mobile-nav__item "><a class="mobile-nav__link " href="./index.html">Студія</a></li>
-					<li class="mobile-nav__item "><a class="mobile-nav__link navigation-list__link--curent"
-							href="./portfolio.html">Портфоліо</a>
+				<ul class="mobile-nav">
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link navigation-list__link--curent" href="./index.html">Студія</a>
 					</li>
-					<li class="mobile-nav__item "><a class="mobile-nav__link" href="">Контакти</a></li>
+					<li class="mobile-nav__item">
+						<a class="mobile-nav__link" href="./portfolio.html">Портфоліо</a>
+					</li>
+					<li class="mobile-nav__item"><a class="mobile-nav__link" href="">Контакти</a></li>
 				</ul>
 
 				<!-- 
 	#contacts 
 -->
+
 				<div class="mobile-container-bottom">
-					<ul class="mobile-contact ">
+					<ul class="mobile-contact lists">
 						<li class="mobile-contact__item">
 							<a class="mobile-contact__link mobile-contact__link--big" href="tel:+380961111111 ">
 								+38 096 111 11 11
@@ -97,25 +104,30 @@
 						</li>
 
 						<li class="mobile-contact__item">
-							<a class=" mobile-contact__link" href="mailto:info@devstudio.com">
+							<a class="mobile-contact__link" href="mailto:info@devstudio.com">
 								info@devstudio.com
 							</a>
 						</li>
 					</ul>
 					<ul class="mobile-social">
-						<li class="mobile-social__item"><a class="mobile-social__link" href="#">Instagram</a></li>
-						<li class="mobile-social__item"><a class="mobile-social__link" href="#">Twitter</a></li>
-						<li class="mobile-social__item"><a class="mobile-social__link" href="#">Facebook</a></li>
-						<li class="mobile-social__item"><a class="mobile-social__link" href="#">LinkedIn</a></li>
+						<li class="mobile-social__item">
+							<a class="mobile-social__link" href="#">Instagram</a>
+						</li>
+						<li class="mobile-social__item">
+							<a class="mobile-social__link" href="#">Twitter</a>
+						</li>
+						<li class="mobile-social__item">
+							<a class="mobile-social__link" href="#">Facebook</a>
+						</li>
+						<li class="mobile-social__item">
+							<a class="mobile-social__link" href="#">LinkedIn</a>
+						</li>
 					</ul>
 				</div>
 			</div>
-
-		</div>
-
-
 		</div>
 	</header>
+
 	<!-- 
 	 ! MAIN
 -->
@@ -152,7 +164,17 @@
 
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img class="thumb__img" src="./images/technocrack.jpg" alt="Фото сайту" width="370" />
+								<picture>
+									<source srcset="./images/project1-dekstop.jpg 1x, 
+								./images/project1-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project1-tablet.jpg  1x,
+								./images/project1-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project1-mobile.jpg 1x,
+								./images/project1-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project1-dekstop.jpg" alt="Фото сайту" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>
@@ -167,7 +189,17 @@
 					<li class="portfolio-list__item">
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img src="./images/new_orlean_vs_golden_star.jpg" alt="Постер" width="370" />
+								<picture>
+									<source srcset="./images/project2-dekstop.jpg 1x, 
+								./images/project2-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project2-tablet.jpg  1x,
+								./images/project2-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project2-mobile.jpg 1x,
+								./images/project2-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project2-dekstop.jpg" alt="Постер" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>
@@ -180,7 +212,17 @@
 					<li class="portfolio-list__item">
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img src="./images/seafood.jpg" alt="Додаток" width="370" />
+								<picture>
+									<source srcset="./images/project3-dekstop.jpg 1x, 
+								./images/project3-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project3-tablet.jpg  1x,
+								./images/project3-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project3-mobile.jpg 1x,
+								./images/project3-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project3-dekstop.jpg" alt="Додаток" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>
@@ -193,7 +235,17 @@
 					<li class="portfolio-list__item">
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img src="./images/prime.jpg" alt="Навушники" width="370" />
+								<picture>
+									<source srcset="./images/project4-dekstop.jpg 1x, 
+								./images/project4-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project4-tablet.jpg  1x,
+								./images/project4-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project4-mobile.jpg 1x,
+								./images/project4-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project4-dekstop.jpg" alt="Навушники" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>
@@ -206,7 +258,17 @@
 					<li class="portfolio-list__item">
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img src="./images/boxes.jpg" alt="Дві коробки" width="370" />
+								<picture>
+									<source srcset="./images/project5-dekstop.jpg 1x, 
+								./images/project5-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project5-tablet.jpg  1x,
+								./images/project5-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project5-mobile.jpg 1x,
+								./images/project5-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project5-dekstop.jpg" alt="Дві коробки" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>
@@ -219,7 +281,17 @@
 					<li class="portfolio-list__item">
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img src="./images/inspiration.jpg" alt="Веб-сайт" width="370" />
+								<picture>
+									<source srcset="./images/project6-dekstop.jpg 1x, 
+								./images/project6-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project6-tablet.jpg  1x,
+								./images/project6-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project6-mobile.jpg 1x,
+								./images/project6-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project6-dekstop.jpg" alt="Веб-сайт" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>
@@ -232,7 +304,17 @@
 					<li class="portfolio-list__item">
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img src="./images/limited_edition.jpg" alt="Книга" width="370" />
+								<picture>
+									<source srcset="./images/project7-dekstop.jpg 1x, 
+								./images/project7-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project7-tablet.jpg  1x,
+								./images/project7-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project7-mobile.jpg 1x,
+								./images/project7-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project7-dekstop.jpg" alt="Книга" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>
@@ -245,7 +327,17 @@
 					<li class="portfolio-list__item">
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img src="./images/lab.jpg" alt="Бирка" width="370" />
+								<picture>
+									<source srcset="./images/project8-dekstop.jpg 1x, 
+								./images/project8-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project8-tablet.jpg  1x,
+								./images/project8-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project8-mobile.jpg 1x,
+								./images/project8-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project8-dekstop.jpg" alt="Бирка" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>
@@ -258,7 +350,17 @@
 					<li class="portfolio-list__item">
 						<a class="portfolio-list__link" href="#">
 							<div class="thumb">
-								<img src="./images/business.jpg" alt="Додаток" width="370" />
+								<picture>
+									<source srcset="./images/project9-dekstop.jpg 1x, 
+								./images/project9-dekstop@2x.jpg 2x" media="(min-width: 1200px)">
+									<source srcset="./images/project9-tablet.jpg  1x,
+								./images/project9-tablet@2x.jpg 2x" media="(min-width: 768px)">
+									<source srcset="./images/project9-mobile.jpg 1x,
+								./images/project9-mobile@2x.jpg 2x" media="(max-width: 767px)">
+
+									<img class="thumb__img" src="./images/project9-dekstop.jpg" alt="Додаток" width="370" />
+								</picture>
+
 								<p class="thumb__text">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
 									Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу.</p>
 							</div>

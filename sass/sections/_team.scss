@@ -1,6 +1,10 @@
 .team {
   background-color: var(--secondary-background-color);
 
+  &-img {
+    width: 100%;
+    height: auto;
+  }
   &-group {
     padding-top: 30px;
     padding-bottom: 24px;

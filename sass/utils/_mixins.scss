@@ -1,5 +1,5 @@
-@mixin visually-hidden{
-	position: absolute;
+@mixin visually-hidden {
+  position: absolute;
   white-space: nowrap;
   width: 1px;
   height: 1px;
@@ -9,10 +9,14 @@
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
-
 }
 
-@mixin transition($property){
-	transition: $property 250ms var(--timing-function);
+@mixin transition($property) {
+  transition: $property 250ms var(--timing-function);
+}
 
+@mixin retina {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
 }
