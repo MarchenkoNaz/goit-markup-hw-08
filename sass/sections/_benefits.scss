@@ -19,7 +19,11 @@
       flex-basis: calc(100% / 4 - var(--card-gap));
       margin-left: var(--card-gap);
     }
+
     margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__title {

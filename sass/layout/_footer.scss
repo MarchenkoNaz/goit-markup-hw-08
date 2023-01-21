@@ -8,6 +8,7 @@
     text-align: center;
   }
   &__tablet-group {
+    align-items: baseline;
     @media (min-width: 768px) {
       justify-content: space-around;
       display: flex;

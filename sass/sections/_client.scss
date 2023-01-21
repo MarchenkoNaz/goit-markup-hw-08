@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--card-gap));
+    margin-bottom: calc((-1 * var(--card-gap)));
 
     @media (max-width: 480px) {
       flex-basis: calc(100% / 2 - var(--card-gap));
